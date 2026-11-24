@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-layout {
+  display: flex;
+  min-height: calc(100vh - 50px);
+}
+
+.page-content {
+  flex: 1;
+  min-width: 0;
+}

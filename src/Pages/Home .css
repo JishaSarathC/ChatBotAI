@@ -1,0 +1,274 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
+  flex-shrink: 0;
+}
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background-color: #F5F0FA;
+}
+
+.chat-messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.chat-message {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* User and AI message cards */
+
+.user-message,
+.ai-message {
+  width: 100%;
+  min-height: 70px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 10px;
+  align-items: start;
+  padding: 12px 10px;
+  background-color: #F0EBF8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Profile images */
+
+.user-message .avatar,
+.ai-message .avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+/* Name */
+
+.user-message span:not(.message-time),
+.ai-message span:not(.message-time) {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+/* Message text */
+
+.user-message p,
+.ai-message p {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #000000;
+  margin: 0 0 5px;
+}
+
+/* Timestamp */
+
+.message-footer {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.message-time {
+  font-family: "Open Sans", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  color: #666;
+}
+
+.feedback-icons {
+  width: 43px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  opacity: 1;
+}
+
+.feedback-icons img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.star {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+  color: white;
+  -webkit-text-stroke: 0.7px black;
+  cursor: pointer;
+}
+
+.star.selected {
+  color: #FFD700;
+  -webkit-text-stroke: 0.7px black;
+}
+
+.feedback-modal {
+  width: 766px;
+  height: 335px;
+  box-sizing: border-box;
+  background-color: #FAF7FF;
+  border-radius: 10px;
+  padding: 15px;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.feedback-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.feedback-header {
+  width: 291px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #000000;
+  margin-bottom: 14px;
+}
+.close-btn {
+  
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+.feedback-modal textarea {
+  width: 716px;
+  height: 187px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #00000073;
+  border-radius: 10px;
+  padding: 10px;
+  resize: none;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+.feedback-light img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.feedback-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.feedback-submit button {
+  width: 95px;
+  height: 32px;
+  background-color: #D7C7F4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.feedback-submit button:hover {
+  background-color: #BDA5E8;
+}
+@media screen and (max-width: 600px) {
+
+  .home {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .chat-messages {
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .chat-message {
+    margin-bottom: 10px;
+  }
+
+  .user-message,
+  .ai-message {
+    grid-template-columns: 30px 1fr;
+    column-gap: 7px;
+    padding: 9px;
+    min-height: 60px;
+  }
+
+  .user-message .avatar,
+  .ai-message .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .user-message p,
+  .ai-message p {
+    font-size: 11px;
+  }
+
+  .feedback-modal {
+    width: calc(100% - 30px);
+    height: auto;
+    min-height: 250px;
+    padding: 12px;
+  }
+
+  .feedback-header {
+    width: 100%;
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .feedback-modal textarea {
+    width: 100%;
+    height: 150px;
+  }
+
+}
