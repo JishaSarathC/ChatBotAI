@@ -14,7 +14,7 @@ function ChatInput({ message, onMessageChange, onSendMessage, onSave }) {
     <form className="chat-input-form" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Message Bot AI…"
+        placeholder="Message Bot AI..."
         value={message}
         onChange={(event) => onMessageChange(event.target.value)}
       />
