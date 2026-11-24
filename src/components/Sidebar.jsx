@@ -1,7 +1,7 @@
 
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import sideimg from ".././assets/sideimg.png";
 import image31 from ".././assets/image31.png";
@@ -61,13 +61,9 @@ function Sidebar() {
 
           </div>
 
-          <button
-            className="past-chat"
-            onClick={handleHistory}
-          >
-            Past Conversations
-          </button>
-
+         <Link to="/history" className="past-chat">
+  Past Conversations
+</Link>
         </div>
 
       </div>

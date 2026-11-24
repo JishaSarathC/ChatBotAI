@@ -6,7 +6,7 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>Bot AI</h2>
+      <h1>Bot AI</h1>
     </nav>
   );
 }
