@@ -65,6 +65,11 @@
   cursor: pointer;
   color: #8066AC;
 }
+.new-chat-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+}
 
 /* Mobile sidebar */
 

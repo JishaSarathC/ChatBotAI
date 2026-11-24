@@ -50,16 +50,14 @@ function Sidebar() {
         <div className="sidebar-item">
 
           <div className="new-chat">
+  <img src={sideimg} alt="Bot logo" />
 
-            <img src={sideimg} alt="Bot logo" />
+  <Link to="/" className="new-chat-link">
+    New Chat
+  </Link>
 
-            <button onClick={handleNewChat}>
-              New Chat
-            </button>
-
-            <img src={image31} alt="New chat icon" />
-
-          </div>
+  <img src={image31} alt="New chat icon" />
+</div>
 
          <Link to="/history" className="past-chat">
   Past Conversations

@@ -10,6 +10,7 @@ function Layout() {
 
       <header className="top-header">
         <img src={thdots} alt="" />
+        <h1>Bot AI</h1>
       </header>
 
       <div className="app-body">
